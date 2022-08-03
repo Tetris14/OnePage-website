@@ -17,6 +17,7 @@ header img {
     height: 200px;
     clip-path: circle();
     margin: 10px 10px 10px 10px;
+    align-self: flex-start;
 }
 
 header h1 {
