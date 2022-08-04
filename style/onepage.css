@@ -22,6 +22,7 @@ header img {
 
 header h1 {
     font-size: 32px;
+    margin: auto auto auto auto;
     color: #CEDADA;
 }
 
@@ -88,7 +89,7 @@ header span::before {
 }
 
 .portfolio__project:hover .portfolio__project__description {
-    height: 330px;
+    height: 240px;
     opacity: 1;
 }
 
@@ -125,4 +126,49 @@ footer a img {
     height: 50%;
     clip-path: circle();
     border: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    header img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .portfolio__project {
+        margin-left: auto;
+        margin-right: auto;
+        height: 80%;
+        width:  80%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    footer a img {
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
 }
