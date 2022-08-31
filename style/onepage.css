@@ -1,5 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
 
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
 body {
     background-color: #424B54;
     font-family: 'Roboto', sans-serif;
@@ -115,17 +170,33 @@ header span::before {
 footer {
     margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
     color: #CEDADA;
 }
 
+footer a {
+    width: 10%;
+}
+
 footer a img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
     height: 50%;
     clip-path: circle();
     border: none;
+}
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+    .portfolio__project {
+        margin-left: auto;
+        margin-right: auto;
+        height: 80%;
+        width:  80%;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
@@ -160,6 +231,10 @@ footer a img {
         flex-direction: column;
         align-items: center;
         align-content: center;
+    }
+
+    footer a {
+        width: auto;
     }
 
     footer a img {
